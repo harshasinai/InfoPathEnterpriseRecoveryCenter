@@ -1,0 +1,1 @@
+export interface ISavedFileResult { status: 'Saved'|'AlreadySaved'|'SavedWithMetadataWarning'|'RequiresConfirmation'|'Failed'; serverRelativeUrl?: string; uniqueId?: string; length?: number; contentHash?: string; message?: string; }

@@ -1,0 +1,2 @@
+import { SourceMode } from './RecoveryEnums';
+export interface ISourceDescriptor { sourceMode: SourceMode; profileKey?: string; sourceSiteUrl?: string; sourceLibraryId?: string; sourceLibraryTitle?: string; sourceItemId?: number; sourceFileUniqueId?: string; sourceFileName?: string; sourceFileUrl?: string; loadedOn: string; isRegisteredSource: boolean; isLocalOnly: boolean; validationWarnings: string[]; }

@@ -1,0 +1,1 @@
+export function downloadBytes(bytes:Uint8Array,fileName:string,mimeType:string):void{const blob=new Blob([bytes],{type:mimeType});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=fileName;a.rel='noopener';a.click();setTimeout(()=>URL.revokeObjectURL(url),0);}

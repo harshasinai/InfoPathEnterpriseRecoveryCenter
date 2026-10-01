@@ -1,0 +1,2 @@
+import { runWithConcurrency } from '../../utils/ConcurrencyQueue';
+it('limits upload concurrency and preserves partial results',async()=>{let active=0,max=0;const result=await runWithConcurrency([1,2,3,4],2,async n=>{active++;max=Math.max(max,active);await Promise.resolve();active--;return n===3?'failed':'saved';});expect(max).toBeLessThanOrEqual(2);expect(result).toEqual(['saved','saved','failed','saved']);});

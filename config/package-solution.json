@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "infopath-enterprise-recovery-center-client-side-solution",
+    "id": "7adf8086-1a1e-4bdf-a68d-71975af4c087",
+    "version": "1.1.1.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "developer": { "name": "", "websiteUrl": "", "privacyUrl": "", "termsOfUseUrl": "", "mpnId": "Undefined-1.23.2" },
+    "metadata": {
+      "shortDescription": { "default": "InfoPath Enterprise Recovery Center" },
+      "longDescription": { "default": "Securely inspect legacy InfoPath XML and recover embedded documents to approved SharePoint destinations." },
+      "screenshotPaths": [], "videoUrl": "", "categories": []
+    },
+    "features": [{
+      "title": "InfoPath Enterprise Recovery Center",
+      "description": "Activates the recovery center web part.",
+      "id": "c0a2bbcb-3e1e-433a-bd8f-c563f9052d02",
+      "version": "1.1.1.0"
+    }]
+  },
+  "paths": { "zippedPackage": "solution/infopath-enterprise-recovery-center.sppkg" }
+}

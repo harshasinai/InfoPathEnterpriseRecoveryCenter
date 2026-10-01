@@ -1,0 +1,2 @@
+import { AttachmentSaveStatus } from './RecoveryEnums';
+export interface IRecoveredAttachment { id: string; qualifiedFieldName: string; sourceField: string; sequence: number; originalFileName: string; safeFileName: string; size: number; mimeType: string; extension: string; bytes: Uint8Array; contentHash?: string; decodeStatus: 'Ready'|'Malformed'|'TooLarge'; saveStatus: AttachmentSaveStatus; savedUrl?: string; error?: string; metadataWarning?: string; }

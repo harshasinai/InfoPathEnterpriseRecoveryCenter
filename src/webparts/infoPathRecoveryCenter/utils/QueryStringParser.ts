@@ -1,0 +1,3 @@
+export interface IRecoveryQuery{profile?:string;listId?:string;itemId?:number;fileUniqueId?:string;}
+const guid=/^[{]?[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}[}]?$/i;
+export function parseRecoveryQuery(search:string):IRecoveryQuery{const q=new URLSearchParams(search),r:IRecoveryQuery={};const p=q.get('profile');if(p&&/^[A-Za-z0-9_-]{1,64}$/.test(p))r.profile=p;const id=q.get('itemId');if(id&&/^\d+$/.test(id)&&Number(id)>0)r.itemId=Number(id);const l=q.get('listId');if(l&&guid.test(l))r.listId=l.replace(/[{}]/g,'');const f=q.get('fileUniqueId');if(f&&guid.test(f))r.fileUniqueId=f.replace(/[{}]/g,'');return r;}

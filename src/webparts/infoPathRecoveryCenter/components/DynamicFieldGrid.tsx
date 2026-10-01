@@ -1,0 +1,2 @@
+import * as React from 'react';import { IParsedField } from '../models/IParsedField';import styles from './InfoPathRecoveryCenter.module.scss';
+export const DynamicFieldGrid:React.FC<{fields:IParsedField[];title:string}> =({fields,title})=>fields.length?<section aria-labelledby={`s-${title.replace(/\s/g,'')}`}><h2 id={`s-${title.replace(/\s/g,'')}`}>{title}</h2><div className={styles.fieldGrid}>{fields.map(f=><div className={styles.field} key={f.id}><div className={styles.label}>{f.label}</div><div className={styles.value}>{f.displayValue}</div></div>)}</div></section>:null;

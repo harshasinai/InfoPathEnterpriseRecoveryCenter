@@ -1,0 +1,2 @@
+import * as React from 'react';import { DefaultButton,PrimaryButton,TextField } from '@fluentui/react';
+export const RawXmlInput:React.FC<{onXml:(x:string)=>void;onClear:()=>void}>=p=>{const[v,setV]=React.useState('');return <div><TextField label="Raw XML" multiline rows={8} value={v} onChange={(_,x)=>setV(x||'')} /><PrimaryButton text="Inspect XML" disabled={!v.trim()} onClick={()=>p.onXml(v)}/><DefaultButton text="Clear" onClick={()=>{setV('');p.onClear();}}/></div>;};

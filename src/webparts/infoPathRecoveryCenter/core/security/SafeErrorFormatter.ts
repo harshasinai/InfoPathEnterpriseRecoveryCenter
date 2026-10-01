@@ -1,0 +1,1 @@
+export function safeError(error:unknown):string{const raw=error instanceof Error?error.message:String(error||'Unexpected error.');return raw.replace(/<[^>]+>/g,'').replace(/(access_token|authorization|requestdigest)\s*[:=]\s*\S+/gi,'$1=[redacted]').replace(/[A-Za-z0-9+/]{80,}={0,2}/g,'[content redacted]').slice(0,500);}

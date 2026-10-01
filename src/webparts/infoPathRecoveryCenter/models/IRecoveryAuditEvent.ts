@@ -1,0 +1,1 @@
+export interface IRecoveryAuditEvent { correlationId: string; profileKey?: string; sourceMode: string; sourceLibrary?: string; sourceItemId?: number; sourceFileUniqueId?: string; operation: string; result: string; attachmentCount?: number; errorCategory?: string; httpStatus?: number; durationMs: number; applicationVersion: string; timestamp: string; }
